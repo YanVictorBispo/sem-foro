@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cemaforo"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-05 11:31:42 "/>
+        <attribute name="created" value="ZGFuaWw7REVTS1RPUC1DRk9FTVExOzIwMjUtMDktMDU7IjEwOjMxOjQ1ICI7Mjc4Nw=="/>
+        <attribute name="edited" value="ZGFuaWw7REVTS1RPUC1DRk9FTVExOzIwMjUtMDktMDU7IjExOjMxOjQyICI7NDsyODk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cor" type="Integer" array="False" size=""/>
+            <declare name="velocidade" type="Integer" array="False" size=""/>
+            <declare name="vermelho" type="Integer" array="False" size=""/>
+            <input variable="cor"/>
+            <if expression="Cor == vermelho">
+                <then>
+                    <output expression="&quot;infra&#231;&#227;o&quot;" newline="True"/>
+                    <output expression="&quot;o usuario cometeu infra&#231;&#227;o por avan&#231;ar o sinal vermelho&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;prossiga&quot;" newline="True"/>
+                    <output expression="&quot;informe a velocidade do veiculo:&quot;" newline="True"/>
+                    <input variable="velocidade"/>
+                    <if expression="velocidade &gt;66 &lt;81">
+                        <then>
+                            <output expression="&quot;infra&#231;&#227;o de velocidade&quot;" newline="True"/>
+                            <output expression="&quot;o usuario cometeu infra&#231;&#227;o de velocidade&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="velocidade &lt;=81">
+                                <then>
+                                    <output expression="&quot;infra&#231;&#227;o gravissima por excesso de velocidade&quot;" newline="True"/>
+                                    <output expression="&quot;O usuario cometeu grave infra&#231;&#227;o de velocidade&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
